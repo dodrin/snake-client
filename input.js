@@ -11,9 +11,11 @@ const setupInput = (conn) => {
 };
 
 const handleUserInput = function (key) {
+  //ctrl + c to exit
   if (key === "\u0003") {
     process.exit();
   } else {
+    //WASD key to move the snake
     if (key === "w") {
       connection.write("Move: up");
     }
