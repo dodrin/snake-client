@@ -25,3 +25,4 @@ Before you can run this client, you will need to be running the server side whic
 - k: "Say: konnichiwa"
 - m: "Say: meow"
 - n: "Say: nande"
+- ctrl + c: exit the game
