@@ -3,9 +3,15 @@ let connection;
 const setupInput = (conn) => {
   connection = conn;
   const stdin = process.stdin;
+  
+  // sets the input mode to raw mode
+  // keypress are immediately provided as input without waiting for the use to press Enter key
   stdin.setRawMode(true);
+  
   stdin.setEncoding("utf8");
   stdin.resume();
+
+  //event listner, "data" event invokes handleUserInput function
   stdin.on("data", handleUserInput);
   return stdin;
 };
@@ -28,6 +34,7 @@ const handleUserInput = function (key) {
     if (key === "d") {
       connection.write("Move: right");
     }
+    //KMN keys to send messages
     if (key === "k") {
       connection.write("Say: konnichiwa");
     }
