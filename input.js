@@ -28,6 +28,15 @@ const handleUserInput = function (key) {
     if (key === "d") {
       connection.write("Move: right");
     }
+    if (key === "k") {
+      connection.write("Say: konnichiwa");
+    }
+    if (key === "m") {
+      connection.write("Say: meow");
+    }
+    if (key === "n") {
+      connection.write("Say: nande");
+    }
   }
 };
 
